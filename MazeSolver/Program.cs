@@ -8,14 +8,14 @@ namespace MazeSolver
     {
         public static void Main(string[] args)
         {
-            string logFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\MazeSolver\Log.txt";
+            string logFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Log.txt";
             if (File.Exists(logFilePath))
             {
                 File.Delete(logFilePath);
             }
             StreamWriter log = new StreamWriter(logFilePath);
 
-            string filePath = @"C:\Users\Robertas\Desktop\MazeSolver\RPAMaze[4197].txt";
+            string filePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\RPAMaze.txt";
             if (File.Exists(filePath))
             {
                 string[] mazeFileInfo = File.ReadAllLines(filePath);
